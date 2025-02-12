@@ -66,8 +66,8 @@ function Cadastro() {
             </button>
             <button 
                 type='submit'
-                className='rounded text-white bg-indigo-400 
-                           hover:bg-indigo-900 w-1/2 py-2
+                className='rounded text-white bg-sky-400 
+                           hover:bg-sky-700 w-1/2 py-2
                            flex justify-center' 
                 >
               Cadastrar
