@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Desabilita a regra do ESLint que acusa variáveis não utilizadas.
 

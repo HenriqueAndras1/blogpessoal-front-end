@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext, ReactNode, useState } from "react"  // Importa funções essenciais do React, como o createContext e useState, além de tipos como ReactNode.
 import UsuarioLogin from "../models/UsuarioLogin"  // Importa o tipo ou modelo do usuário (dados de login).
@@ -64,3 +65,5 @@ export function AuthProvider({ children }: AuthProviderProps) {  // Componente A
         </AuthContext.Provider>
     )
 }
+
+//O AuthContext é um contexto do React que gerencia a autenticação do usuário em toda a aplicação. Ele armazena informações como o token de autenticação, dados do usuário e funções para login e logout, permitindo que qualquer componente tenha acesso a essas informações sem precisar repassá-las manualmente via props.

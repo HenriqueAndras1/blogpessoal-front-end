@@ -28,8 +28,16 @@ function Login() {
     // Função para atualizar o estado 'usuarioLogin' com base nas mudanças nos campos do formulário.
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuarioLogin({
-            ...usuarioLogin,  // Mantém os outros valores no estado (não altera os que não foram modificados).
-            [e.target.name]: e.target.value  // Atualiza o campo específico (por exemplo, 'usuario' ou 'senha').
+            ...usuarioLogin,  /* Mantém os outros valores no estado (não altera os que não foram modificados). dessa forma id: 
+            nome: 
+            usuario: 
+            senha: 
+            foto: 
+            token: */
+
+            [e.target.name]: e.target.value  // Atualiza o campo específico "input"(por exemplo, 'usuario' ou 'senha').
+            /*"target"=> "puxa do input name" => usuario: "value" => root@root.com
+            e "input senha" senha: "value 12345678" */
         })
     }
 

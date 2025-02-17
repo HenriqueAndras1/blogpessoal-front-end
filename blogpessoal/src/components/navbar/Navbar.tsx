@@ -21,14 +21,24 @@ function Navbar() {
                 flex justify-center py-4'>
 
                 <div className="container flex justify-between text-lg">
-                    <Link to='/home' className="text-2xl font-bold">BlogNet</Link>
+                    <Link to='/home' className="hover:opacity-75 text-2xl font-bold">BlogNet</Link>
 
                     <div className='flex gap-4'>
-                        Postagens -
-                        Temas -
-                        Cadastrar Tema -
-                        Perfil -
-                        <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
+                        
+                    <Link to='/postagens' className='hover:opacity-75'>Postagens
+                    </Link>
+                        
+                        <Link to='/temas' className='hover:opacity-75'>Temas
+                        </Link>
+                        
+                        <Link to='/cadastrartema' className='hover:opacity-75'>Cadastrar Tema
+                        </Link>
+
+                        <Link to='/perfil' className='hover:opacity-75'>Perfil
+                        </Link>
+
+                        <Link to='' onClick={logout} className='hover:opacity-75'>Sair
+                        </Link>
                     </div>
                 </div>
             </div>
