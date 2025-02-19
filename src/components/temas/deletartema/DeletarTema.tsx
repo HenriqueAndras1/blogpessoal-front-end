@@ -100,14 +100,14 @@ function DeletarTema() {
                 <div className="flex">
                     {/* Botão para cancelar a operação */}
                     <button 
-                        className='text-slate-100 bg-red-600 hover:bg-red-700 w-full py-2'
+                        className='text-slate-100 bg-red-600 hover:bg-red-800 w-full py-2'
                         onClick={retornar}>
                         Não
                     </button>
                     {/* Botão para confirmar a exclusão do tema */}
                     <button 
                         className='w-full text-slate-100 bg-green-500
-                                   hover:bg-green-600 flex items-center justify-center'
+                                   hover:bg-green-700 flex items-center justify-center'
                                    onClick={deletarTema}>
                         {isLoading ? 
                             // Exibe o spinner de loading enquanto a operação é realizada

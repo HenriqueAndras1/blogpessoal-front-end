@@ -17,7 +17,7 @@ function CardTemas({ tema }: CardTemasProps) {
                 Tema
             </header>
 
-            {/* Parágrafo representando a descrição do tema com fundo cinza claro e tamanho de texto grande */}
+            {/* Injetando js dentro do html, Parágrafo representando a descrição do tema com fundo cinza claro e tamanho de texto grande */}
             <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
             
             {/* Div que contém os botões de ação (Editar e Deletar) */}
@@ -32,7 +32,7 @@ function CardTemas({ tema }: CardTemasProps) {
 
                 {/* Link para deletar, estilizado com fundo vermelho e hover escurecendo */}
                 <Link to={`/deletartema/${tema.id}`} 
-	className='text-slate-100 bg-red-600 hover:bg-red-700 w-full 
+	className='text-slate-100 bg-red-600 hover:bg-red-800 w-full 
 		flex items-center justify-center'>
 	<button>Deletar</button>
 </Link>
