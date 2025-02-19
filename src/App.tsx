@@ -16,7 +16,7 @@ import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPosta
 function App() {
   return (
     <>
-      <AuthProvider>
+      <AuthProvider> {/* Chamamos o Provider/Provedor para compartilhar os dados com a App */}
         <BrowserRouter>  {/* Habilita processo com uma satelite*/}
           <Navbar />
           <div className="min-h-[80vh]">
