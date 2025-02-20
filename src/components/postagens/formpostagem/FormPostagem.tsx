@@ -10,7 +10,7 @@ import { RotatingLines } from "react-loader-spinner";
 
 function FormPostagem() {
 
-    // Hook para gerenciar a navegação do usuário
+    // Hook para gerenciar a navegação do usuário, caso token nao esteja autenticado retornar a pagina de login
     const navigate = useNavigate();
 
     // Variavel de Estado que serve para indicar que existe um carregamento ocorrendo
@@ -29,9 +29,10 @@ function FormPostagem() {
     const { id } = useParams<{ id: string }>()
 
     // useContext acessa nosso contexto, buscando dele as informações necessárias para esse Componente
-    const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout } = useContext(AuthContext) // Gerenciar estados globais, que deve ser complartilhado com outros componentes.
     const token = usuario.token
 
+    
     // Uma função assíncrona (async) que busca uma postagem específica por ID e trata possíveis erros durante a requisição - usada na atualização
     async function buscarPostagemPorId(id: string) { // Declara uma função assíncrona chamada buscarPostagemPorId que recebe um id como parâmetro.
         try {
@@ -82,7 +83,7 @@ function FormPostagem() {
 
     // Esse useEffect é responsavel por buscar os Temas e também, se o ID for diferente de undefined
     // pegar o ID da postagem e fazer uma busca no back-end em busca dos dados.
-    useEffect(() => {
+    useEffect(() => { // useEffect dispara buscarTemas, captura e tras todos os temas cadastrados.
         buscarTemas()
 
         if (id !== undefined) {
