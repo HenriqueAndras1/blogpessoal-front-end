@@ -104,12 +104,12 @@ function Cadastro() {
 
           {/* Campo Usuário */}
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+            <label htmlFor="usuario">Email</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Usuário"
+              placeholder="Usuario@gmail.com"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.usuario}
               onChange={atualizarEstado}
@@ -123,7 +123,7 @@ function Cadastro() {
               type="text"
               id="foto"
               name="foto"
-              placeholder="Foto"
+              placeholder="Opcional"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.foto}
               onChange={atualizarEstado}
@@ -160,7 +160,7 @@ function Cadastro() {
 
           {/* Botões */}
           <div className="flex justify-around w-full gap-8">
-            <button className='rounded text-white bg-red-400 
+            <button className='rounded text-white bg-red-500 
                   hover:bg-red-700 w-1/2 py-2' onClick={retornar}>
               Cancelar
             </button>
