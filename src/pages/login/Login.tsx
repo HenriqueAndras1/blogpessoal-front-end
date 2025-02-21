@@ -58,12 +58,12 @@ function Login() {
                     
                     {/* Campo para o nome de usuário */}
                     <div className="flex flex-col w-full">
-                        <label htmlFor="usuario">Usuário</label>
+                        <label htmlFor="usuario">E-mail</label>
                         <input
                             type="text"
                             id="usuario"
                             name="usuario"
-                            placeholder="Usuario"
+                            placeholder="Digite e-mail cadastrado"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuarioLogin.usuario}  // O valor do input é controlado pelo estado 'usuarioLogin'.
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}  // Atualiza o estado quando o usuário digita no campo.
