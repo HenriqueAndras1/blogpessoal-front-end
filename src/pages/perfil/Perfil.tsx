@@ -26,7 +26,7 @@ function Perfil() {
 
             <img 
                 className='w-full h-72 object-cover border-b-8 border-white' 
-                src="/assets/black.jpg" alt="Capa do Perfil" />
+                src="https://png.pngtree.com/thumb_back/fh260/background/20220523/pngtree-vector-abstract-upholstery-or-matte-black-leather-texture-sofa-background-and-image_1370542.jpg" alt="Capa do Perfil" />
 
             <img 
                 className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' 
