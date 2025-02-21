@@ -26,7 +26,7 @@ function Perfil() {
 
             <img 
                 className='w-full h-72 object-cover border-b-8 border-white' 
-                src="public/assets/black.jpg" alt="Capa do Perfil" />
+                src="../../assets/black.jpg" alt="Capa do Perfil" />
 
             <img 
                 className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' 
