@@ -3,6 +3,7 @@
 import { createContext, ReactNode, useState } from "react"  // Importa funções essenciais do React, como o createContext e useState, além de tipos como ReactNode.
 import UsuarioLogin from "../models/UsuarioLogin"  // Importa o tipo ou modelo do usuário (dados de login).
 import { login } from "../services/Service"  // Importa a função de login, que se comunica com o serviço de autenticação.
+import { ToastAlerta } from "../utils/ToastAlerta"
 
 interface AuthContextProps {
     usuario: UsuarioLogin  // Representa o estado do usuário autenticado, conforme o modelo UsuarioLogin.
@@ -38,10 +39,10 @@ export function AuthProvider({ children }: AuthProviderProps) {  // Componente A
         try {
             // Chama a função 'login' do serviço, passando a URL da API e os dados do usuário. Caso o login seja bem-sucedido, o estado do usuário é atualizado.
             await login(`/usuarios/logar`, usuarioLogin, setUsuario)
-            alert("O Usuário foi autenticado com sucesso!")  // Exibe uma mensagem de sucesso ao usuário.
+            ToastAlerta("Login efeituado com sucesso!", "sucesso")  // Exibe uma mensagem de sucesso ao usuário.
         } catch (error) {
             // Caso haja um erro no login, exibe uma mensagem de erro.
-            alert("Os Dados do usuário estão inconsistentes!")
+            ToastAlerta("Os dados do Usuário estão inconsistentes!", "erro")
         }
         setIsLoading(false)  // Define o estado de carregamento como falso após o processo de login, seja com sucesso ou erro.
     }

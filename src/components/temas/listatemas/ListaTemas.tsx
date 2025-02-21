@@ -12,6 +12,7 @@ import { AuthContext } from "../../../contexts/AuthContext"; // Importa o contex
 import Tema from "../../../models/Tema"; // Importa o modelo de dados Tema
 import CardTemas from "../cardtemas/CardTemas"; // Importa o componente de card dos temas
 import { buscar } from "../../../services/Service"; // Função de busca para API
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function ListaTemas() {
     const navigate = useNavigate(); // Hook para redirecionamento de rotas
@@ -40,7 +41,7 @@ function ListaTemas() {
     // useEffect para verificar se o usuário está autenticado
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!'); // Exibe um alerta caso não tenha token
+            ToastAlerta('Você precisa estar logado!', "info"); // Exibe um alerta caso não tenha token
             navigate('/'); // Redireciona para a página inicial
         }
     }, [token]); // Executa sempre que o token mudar

@@ -5,7 +5,7 @@ import axios from "axios";
 
 // Configuração da instância do Axios com a base URL da API
 const api = axios.create({
-    baseURL: 'https://blog-pessoal-ahn9.onrender.com' // Define o endpoint base para as requisições
+    baseURL: import.meta.env.VITE_API_URL // Define o endpoint base para as requisições
 })
 
 /**

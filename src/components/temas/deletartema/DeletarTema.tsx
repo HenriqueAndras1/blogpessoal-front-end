@@ -6,6 +6,7 @@ import { AuthContext } from "../../../contexts/AuthContext"
 import Tema from "../../../models/Tema"
 import { buscar, deletar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 function DeletarTema() {
     // Hook para navegação entre páginas
@@ -42,7 +43,7 @@ function DeletarTema() {
     // useEffect para verificar se o usuário está logado, caso contrário, redireciona para a página inicial
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta('Você precisa estar logado', "info")
             navigate('/')
         }
     }, [token])
@@ -66,13 +67,13 @@ function DeletarTema() {
                 }
             })
 
-            alert('Tema apagado com sucesso') // Exibe um alerta de sucesso
+            ToastAlerta('Tema apagado com sucesso', "sucesso") // Exibe um alerta de sucesso
         } catch (error: any) {
             // Se erro 403 (não autorizado), faz logout do usuário
             if (error.toString().includes('403')) {
                 handleLogout()
             } else {
-                alert('Erro ao deletar o tema.') // Exibe um alerta de erro
+                ToastAlerta('Erro ao deletar o tema.', "erro") // Exibe um alerta de erro
             }
         }
 
