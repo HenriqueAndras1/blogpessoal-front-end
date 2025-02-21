@@ -19,13 +19,13 @@ function Footer() {
                     
                     {/* Container flex para alinhar os ícones lado a lado */}
                     <div className='flex gap-4 mt-2'>
-                        <a href="https://www.linkedin.com/school/generationbrasil" target="_blank" className='hover:opacity-75'>
+                        <a href="https://www.linkedin.com/in/henriquesilvaaa/" target="_blank" className='hover:opacity-75'>
                             <LinkedinLogo size={48} weight='bold' />
                         </a>
-                        <a href="https://www.instagram.com/generationbrasil" target="_blank" className='hover:opacity-75'>
+                        <a href="https://www.instagram.com/henrique_andras/" target="_blank" className='hover:opacity-75'>
                             <InstagramLogo size={48} weight='bold' />
                         </a>
-                        <a href="https://www.facebook.com/generationbrasil" target="_blank" className='hover:opacity-75'>
+                        <a href="https://www.facebook.com/profile.php?id=100012756159084" target="_blank" className='hover:opacity-75'>
                             <FacebookLogo size={48} weight='bold' />
                         </a>
                     </div>
