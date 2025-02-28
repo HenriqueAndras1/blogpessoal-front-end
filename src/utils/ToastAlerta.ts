@@ -1,4 +1,4 @@
-import { Bounce, toast } from "react-toastify";
+import { Bounce, toast } from "react-toastify"; 
 
 export function ToastAlerta(mensagem: string, tipo: string) {
   switch (tipo) {
